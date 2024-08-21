@@ -1,4 +1,4 @@
-/* import nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer';
 import { SMTP } from '../constants/index.js';
 import { env } from '../utils/env.js';
 
@@ -14,4 +14,3 @@ const transporter = nodemailer.createTransport({
 export const sendEmail = async (options) => {
   return await transporter.sendMail(options);
 };
- */

@@ -1,6 +1,7 @@
 import { ContactsCollection } from '../db/models/contact.js';
 import { calculatePaginationData } from '../utils/calculatePaginationData.js';
 import { SORT_ORDER } from '../constants/index.js';
+import { saveFileToCloudinary } from '../utils/saveFileToCloudinary.js';
 
 export const getAllContacts = async ({
   page = 1,
@@ -44,15 +45,30 @@ export const getContactById = async (userId, contactId) => {
   return contact;
 };
 
-export const createContact = async (payload) => {
-  const contact = await ContactsCollection.create(payload);
+export const createContact = async ({ photo, userId, ...payload }) => {
+  let url;
+  if (photo) {
+    url = await saveFileToCloudinary(photo);
+  }
+  const contact = await ContactsCollection.create({
+    ...payload,
+    userId: userId,
+    photo: url,
+  });
   return contact;
 };
 
-export const patchContactById = async (userId, contactId, payload) => {
+export const patchContactById = async (
+  contactId,
+  { photo, userId, ...payload },
+) => {
+  let url;
+  if (photo) {
+    url = await saveFileToCloudinary(photo);
+  }
   const contact = await ContactsCollection.findOneAndUpdate(
-    { _id: contactId, userId },
-    payload,
+    { _id: contactId, userId: userId },
+    { ...payload, photo: url },
     { new: true },
   );
   return contact;
