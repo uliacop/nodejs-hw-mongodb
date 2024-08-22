@@ -81,3 +81,13 @@ export const deleteContactById = async (userId, contactId) => {
   });
   return contact;
 };
+export const updateContact = (contactId, contact, userId) => {
+  return ContactsCollection.findOneAndUpdate(
+    { _id: contactId, userId },
+    contact,
+    {
+      new: true,
+      upsert: true,
+    },
+  );
+};
