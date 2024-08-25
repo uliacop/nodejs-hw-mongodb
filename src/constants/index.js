@@ -13,15 +13,9 @@ export const SMTP = {
   SMTP_PASSWORD: 'SMTP_PASSWORD',
   SMTP_FROM: 'SMTP_FROM',
 };
-
-export const TEMPLATES_DIR = path.join(process.cwd(), 'src', 'templates');
-export const TEMP_UPLOAD_DIR = path.join(process.cwd(), 'temp');
-export const UPLOAD_AVATAR_DIR = path.join(
-  process.cwd(),
-  'src',
-  'uploads',
-  'avatars',
-);
+export const TEMPLATE_DIR = path.resolve('src', 'templates');
+export const TMP_UPLOAD_DIR = path.resolve('src', 'tmp');
+export const UPLOAD_AVATAR_DIR = path.resolve('src', 'uploads', 'avatars');
 export const CLOUDINARY = {
   CLOUD_NAME: 'CLOUD_NAME',
   API_KEY: 'API_KEY',

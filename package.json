@@ -8,12 +8,14 @@
     "lint": "eslint src/**/*.js",
     "start": "node ./src/index.js",
     "dev": "nodemon src/index.js"
+
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.2.0",
+    "@redocly/cli": "^1.21.0",
     "eslint": "^9.2.0",
     "globals": "^15.1.0",
     "nodemon": "^3.1.4"
@@ -35,6 +37,7 @@
     "nodemailer": "^6.9.14",
     "pino": "^9.3.1",
     "pino-http": "^10.2.0",
-    "pino-pretty": "^11.2.1"
+    "pino-pretty": "^11.2.1",
+    "punycode": "^2.3.1"
   }
 }

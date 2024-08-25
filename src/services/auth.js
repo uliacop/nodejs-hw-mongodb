@@ -4,7 +4,7 @@ import createHttpError from 'http-errors';
 import { Session } from '../db/models/session.js';
 import {
   FIFTEEN_MINUTES,
-  TEMPLATES_DIR,
+  TEMPLATE_DIR,
   THIRTY_DAYS,
 } from '../constants/index.js';
 import { randomBytes } from 'crypto';
@@ -116,7 +116,7 @@ export const requestResetToken = async (email) => {
   );
 
   const resetPasswordTemplatePath = path.join(
-    TEMPLATES_DIR,
+    TEMPLATE_DIR,
     'reset-password-email.html',
   );
 
