@@ -12,6 +12,9 @@
   "servers": [
     {
       "url": "http://localhost:3000"
+    },
+    {
+      "url": "https://nodejs-hw-mongodb-4-rsgx.onrender.com"
     }
   ],
   "tags": [
@@ -398,7 +401,7 @@
                   "name": {
                     "description": "Contact's name",
                     "type": "string",
-                    "example": "Andriana Petrenko"
+                    "example": "Volodia Test"
                   },
                   "phoneNumber": {
                     "description": "Contact's number",
@@ -935,22 +938,22 @@
           "_id": {
             "description": "Contact's id",
             "type": "string",
-            "example": "65e4decdd286b30065d54af9"
+            "example": "66ccd75369662a7e2156ab51"
           },
           "name": {
             "description": "Contact's name",
             "type": "string",
-            "example": "John Doe"
+            "example": "Iryna Merlak"
           },
           "phoneNumber": {
             "description": "Contact's phone number",
             "type": "string",
-            "example": "380123456789"
+            "example": "3809584565465"
           },
           "email": {
             "description": "Contact's email",
             "type": "string",
-            "example": "john.doe@gmail.com"
+            "example": "irynamerla@example.com"
           },
           "isFavourite": {
             "description": "Whether contact is favourite",
@@ -969,12 +972,12 @@
           "userId": {
             "description": "Contact's user id",
             "type": "string",
-            "example": "66c7586122021709a7679b0b"
+            "example": "66ccd75369662a7e2156ab51"
           },
           "photo": {
             "description": "Link to contact's photo",
             "type": "string",
-            "example": "https://res.cloudinary.com/uqwgdu/image/upload/image.png"
+            "example": "https://res.cloudinary.com/dwwjkfids/image/upload/v1724704867/cghhqfn7hwkoketnu4lb.jpg"
           }
         }
       }
